@@ -1,0 +1,148 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.Login {
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(transparent,#000a);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 40px 0 #0007;
+}
+
+.Fondo {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    background: linear-gradient(to right, #023d20, #193257);
+    position: relative;
+    padding: 40px;
+}
+
+.Titulo {
+    font-family: 'Avengeance Heroic Avenger', sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #d0d0d0;
+    background: linear-gradient(to top, #ccc, #fff 40%, #aaa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+      2px 2px 2px #000a, 
+      -1px -1px 1px rgba(255,255,255,0.2),
+      0 0 10px rgba(0,0,0,0.4);
+    margin-bottom: 60px;
+}
+
+.parrafo {
+    font-size: 40px;
+    font-style: italic;
+    color: #fff; 
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.6), 
+        0 0 10px rgba(0, 0, 0, 0.3);   
+}
+
+.Descripcion {
+    font-family: sans-serif;
+    width: 700px;
+    height: 400px;     
+    background-color: transparent;
+    color: white;
+}
+
+.entradas {
+    margin-bottom: 30px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.Boton_inicio {
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+    height: 50px;
+    border-radius: 15px;
+    width: 600px;
+    margin: auto;
+    border-style: double;
+    border-width: 6px;
+    background: radial-gradient(transparent, #37475e);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.Boton_inicio:active {
+    transform: scale(0.95);
+}
+
+.Boton_registrar {
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+    margin: auto;
+    height: 50px; 
+    line-height: 50px; 
+    border-radius: 15px;
+    width: 600px;
+    border-style: double;
+    border-width: 6px;
+    background: radial-gradient(transparent, #34694f);
+    text-decoration: none;
+    border-color: black;
+    transition: transform 0.2s ease;
+}
+
+.Boton_registrar:active {
+    transform: scale(0.95);
+}
+
+.Mostrarc {
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+/* Estilo del mensaje flash */
+.mensaje_flash {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    width: 80%;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: sans-serif;
+
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}

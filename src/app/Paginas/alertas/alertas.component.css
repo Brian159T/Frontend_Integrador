@@ -1,0 +1,6 @@
+.container-fluid{
+    background: linear-gradient(to right, #023d20, #193257);
+    width: 100%;
+    min-height: 100vh;
+
+}
