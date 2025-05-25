@@ -92,6 +92,8 @@ html, body {
     background: radial-gradient(transparent, #37475e);
     cursor: pointer;
     transition: transform 0.2s ease;
+    text-decoration: none;
+    border-color: black;
 }
 
 .Boton_inicio:active {

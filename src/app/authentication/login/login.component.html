@@ -7,7 +7,8 @@
     <form class="Login" method="post" action="/control">
         <input type="email" class="entradas" placeholder="Correo" required name="email">
         <input type="password" class="entradas" placeholder="Contraseña" required name="contrasena">
-        <input class="Boton_inicio" type="submit" value="Iniciar Sesión">       
+        
+        <a class="Boton_inicio"  routerLink="/Dashboard" routerLinkActive="active">Iniciar Sesión</a>      
         <a class="Boton_registrar" routerLink="/crear" routerLinkActive="active">Crear una cuenta</a>
         
         <label class="Mostrarc">

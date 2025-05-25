@@ -1,5 +1,6 @@
 
-<app-menu></app-menu>
+<app-menu *ngIf="shouldShowMenu()"></app-menu>
+<app-menu-usuario *ngIf="shouldShowMenu_usuario()"></app-menu-usuario>
  
 
 

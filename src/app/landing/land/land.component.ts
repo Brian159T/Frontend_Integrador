@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-land',
-  imports: [],
+  standalone:true,
+  imports: [RouterModule],
   templateUrl: './land.component.html',
   styleUrl: './land.component.css'
 })

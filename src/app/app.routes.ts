@@ -5,6 +5,10 @@ import { AlertasComponent } from './Paginas/alertas/alertas.component';
 import { DashboardComponent } from './Paginas/dashboard/dashboard.component';
 import { MapasComponent } from './Paginas/mapas/mapas.component';
 import { ReportesComponent } from './Paginas/reportes/reportes.component';
+import { AlertasUsuarioComponent } from './Paginas/alertas-usuario/alertas-usuario.component';
+import { DashboardUsuarioComponent } from './Paginas/dashboard-usuario/dashboard-usuario.component';
+import { GraficosUsuarioComponent } from './Paginas/graficos-usuario/graficos-usuario.component';
+
 export const routes: Routes = [
     {
     path: '',
@@ -60,6 +64,19 @@ export const routes: Routes = [
   {
     path:'Reportes',component:DashboardComponent
   },
+  {
+    path:'Alertas_usuario',component:AlertasUsuarioComponent
+  },
+  {
+    path:'Dashboard_usuario',component:DashboardUsuarioComponent
+  },
+  {
+    path:'Graficos_usuario',component:GraficosUsuarioComponent
+  },
+  {
+    path:'Mapas_usuario',component:MapasComponent
+  },
+  
   
   
   
