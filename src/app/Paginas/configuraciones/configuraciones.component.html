@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row g-0">
+    <!-- Columna lateral (puedes usarla para menú o navegación si deseas) -->
+    <div class="col-2">
+      <!-- Espacio reservado -->
+    </div>
+
+    <!-- Columna principal -->
+    <div class="col-9">
+      <div class="container">
+        <!-- Encabezado -->
+        <div class="header">
+          <div class="header-left">
+            <div class="settings-icon">⚙️</div>
+            <h1 class="title">CONFIGURACIÓN</h1>
+          </div>
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="search-container">
+              <input type="text" class="search-box" placeholder="Buscar una configuración" />
+              <span class="search-icon">🔍</span>
+            </div>
+            <div class="window-controls">
+              <button class="control-btn minimize"></button>
+              <button class="control-btn maximize"></button>
+              <button class="control-btn close"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjetas de configuración -->
+        <div class="settings-grid">
+          <div class="setting-card" *ngFor="let setting of settings">
+            <div class="setting-icon">{{ setting.icon }}</div>
+            <div class="setting-title">{{ setting.title }}</div>
+            <div class="setting-description">{{ setting.description }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,7 +8,11 @@ import { ReportesComponent } from './Paginas/reportes/reportes.component';
 import { AlertasUsuarioComponent } from './Paginas/alertas-usuario/alertas-usuario.component';
 import { DashboardUsuarioComponent } from './Paginas/dashboard-usuario/dashboard-usuario.component';
 import { GraficosUsuarioComponent } from './Paginas/graficos-usuario/graficos-usuario.component';
-
+import { ConfiguracionesComponent } from './Paginas/configuraciones/configuraciones.component';
+import { ConfiguracionesUsuarioComponent } from './Paginas/configuraciones-usuario/configuraciones-usuario.component';
+import { PerfilComponent } from './Paginas/perfil/perfil.component';
+import { PerfilUsuarioComponent } from './Paginas/perfil-usuario/perfil-usuario.component';
+import { MapasAdmiComponent } from './Paginas/mapas-admi/mapas-admi.component';
 export const routes: Routes = [
     {
     path: '',
@@ -62,7 +66,7 @@ export const routes: Routes = [
     path:'Mapas',component:DashboardComponent
   },
   {
-    path:'Reportes',component:DashboardComponent
+    path:'Reportes',component:ReportesComponent
   },
   {
     path:'Alertas_usuario',component:AlertasUsuarioComponent
@@ -76,7 +80,21 @@ export const routes: Routes = [
   {
     path:'Mapas_usuario',component:MapasComponent
   },
-  
+   {
+    path:'Configuraciones_admi',component:ConfiguracionesComponent
+  },
+   {
+    path:'Configuraciones_usuario',component:ConfiguracionesUsuarioComponent
+  },
+  {
+    path:'Perfil',component:PerfilComponent
+  },
+  {
+    path:'Perfil_usuario',component:PerfilUsuarioComponent
+  },
+  {
+    path:'Mapas_admi',component:MapasAdmiComponent
+  },
   
   
   

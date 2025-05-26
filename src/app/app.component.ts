@@ -39,7 +39,11 @@ export class AppComponent {
       '/Alertas',
       '/Usuarios',
       '/Mapas',
-      '/Reportes'
+      '/Reportes',
+      '/Configuraciones_admi',
+      '/Perfil',
+      '/Mapas_admi'
+
     ].includes(this.currentRoute);
   }
 
@@ -50,6 +54,10 @@ export class AppComponent {
       '/Alertas_usuario',
       '/Graficos_usuario',
       '/Mapas_usuario',
+      '/Configuraciones_usuario',
+      '/Perfil_usuario',
+     
+      
     ].includes(this.currentRoute);
   }
 }
