@@ -13,6 +13,7 @@ import { ConfiguracionesUsuarioComponent } from './Paginas/configuraciones-usuar
 import { PerfilComponent } from './Paginas/perfil/perfil.component';
 import { PerfilUsuarioComponent } from './Paginas/perfil-usuario/perfil-usuario.component';
 import { MapasAdmiComponent } from './Paginas/mapas-admi/mapas-admi.component';
+
 export const routes: Routes = [
     {
     path: '',
