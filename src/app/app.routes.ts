@@ -13,6 +13,7 @@ import { ConfiguracionesUsuarioComponent } from './Paginas/configuraciones-usuar
 import { PerfilComponent } from './Paginas/perfil/perfil.component';
 import { PerfilUsuarioComponent } from './Paginas/perfil-usuario/perfil-usuario.component';
 import { MapasAdmiComponent } from './Paginas/mapas-admi/mapas-admi.component';
+import { ReportesUsuarioComponent } from './Paginas/reportes-usuario/reportes-usuario.component';
 
 export const routes: Routes = [
     {
@@ -95,6 +96,9 @@ export const routes: Routes = [
   },
   {
     path:'Mapas_admi',component:MapasAdmiComponent
+  },
+  {
+    path:'Reportes_usuario',component:ReportesUsuarioComponent
   },
   
   

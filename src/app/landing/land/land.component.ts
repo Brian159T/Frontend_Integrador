@@ -1,13 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-land',
-  standalone:true,
+  standalone: true,
   imports: [RouterModule],
   templateUrl: './land.component.html',
-  styleUrl: './land.component.css'
+  styleUrls: ['./land.component.css']  // ← corregido aquí
 })
-export default class LandComponent {
+export default class LandComponent implements AfterViewInit {  // ← implementa AfterViewInit
+
+  ngAfterViewInit(): void {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // espera a que el DOM esté listo
+      }
+    }
+  }
 
 }

@@ -56,6 +56,7 @@ export class AppComponent {
       '/Mapas_usuario',
       '/Configuraciones_usuario',
       '/Perfil_usuario',
+      '/Reportes_usuario',
      
       
     ].includes(this.currentRoute);

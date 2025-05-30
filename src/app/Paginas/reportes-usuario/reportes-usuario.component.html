@@ -1,0 +1,134 @@
+<div class="container-fluid">
+  <div class="row g-0">
+    <div class="col-2">
+      <!-- Espacio reservado para menú lateral u otro contenido -->
+    </div>
+
+    <div class="col-10">
+      <div class="container">
+        <!-- Encabezado -->
+        <div class="header">
+          <h1>📊 Sistema de Reportes</h1>
+          <p>Genera reportes personalizados en PDF y Excel</p>
+        </div>
+
+        <div class="content">
+          <!-- Estadísticas -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">1,234</div>
+              <div class="stat-label">Total Registros</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">89</div>
+              <div class="stat-label">Reportes Generados</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">45</div>
+              <div class="stat-label">Usuarios Activos</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Satisfacción</div>
+            </div>
+          </div>
+
+          <!-- Filtros -->
+          <div class="filters-section">
+            <h2 class="filters-title">🔍 Filtros de Búsqueda</h2>
+            <div class="filters-grid">
+              <div class="filter-group">
+                <label for="fecha-inicio">Fecha Inicio:</label>
+                <input type="date" id="fecha-inicio">
+              </div>
+              <div class="filter-group">
+                <label for="fecha-fin">Fecha Fin:</label>
+                <input type="date" id="fecha-fin">
+              </div>
+              <div class="filter-group">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria">
+                  <option value="">Todas las categorías</option>
+                  <option value="ventas">Ventas</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="finanzas">Finanzas</option>
+                  <option value="recursos-humanos">Recursos Humanos</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="estado">Estado:</label>
+                <select id="estado">
+                  <option value="">Todos los estados</option>
+                  <option value="activo">Activo</option>
+                  <option value="inactivo">Inactivo</option>
+                  <option value="pendiente">Pendiente</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="actions-section">
+              <button class="btn btn-generate" (click)="generarReporte()">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                </svg>
+                Generar Reporte
+              </button>
+
+              <button class="btn btn-pdf" (click)="exportarPDF()">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                </svg>
+                Exportar PDF
+              </button>
+
+              <button class="btn btn-excel" (click)="exportarExcel()">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                </svg>
+                Exportar Excel
+              </button>
+
+              <button class="btn btn-clear" (click)="limpiarFiltros()">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+                </svg>
+                Limpiar Filtros
+              </button>
+            </div>
+          </div>
+
+          <!-- Resultados -->
+          <div class="results-section">
+            <h2 class="results-title">📋 Resultados del Reporte</h2>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Categoría</th>
+                    <th>Descripción</th>
+                    <th>Estado</th>
+                    <th>Valor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let r of resultados">
+                    <td>{{ r.id }}</td>
+                    <td>{{ r.fecha }}</td>
+                    <td>{{ r.categoria }}</td>
+                    <td>{{ r.descripcion }}</td>
+                    <td>{{ r.estado }}</td>
+                    <td>{{ r.valor }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div> <!-- .content -->
+      </div> <!-- .container -->
+    </div> <!-- .col-9 -->
+  </div> <!-- .row -->
+</div> <!-- .container-fluid -->
+
