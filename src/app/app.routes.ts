@@ -14,6 +14,7 @@ import { PerfilComponent } from './Paginas/perfil/perfil.component';
 import { PerfilUsuarioComponent } from './Paginas/perfil-usuario/perfil-usuario.component';
 import { MapasAdmiComponent } from './Paginas/mapas-admi/mapas-admi.component';
 import { ReportesUsuarioComponent } from './Paginas/reportes-usuario/reportes-usuario.component';
+import { ProyectosComponent } from './Paginas/proyectos/proyectos.component';
 
 export const routes: Routes = [
     {
@@ -99,6 +100,9 @@ export const routes: Routes = [
   },
   {
     path:'Reportes_usuario',component:ReportesUsuarioComponent
+  },
+  {
+    path:'Proyectos',component:ProyectosComponent
   },
   
   

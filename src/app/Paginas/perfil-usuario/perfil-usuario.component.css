@@ -208,13 +208,15 @@
 }
 
 .option-section {
-  background: radial-gradient(transparent,#000a);
+  background: radial-gradient(#1954a7, #072a5a);
   border-radius: 20px;
   
   padding: 24px;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
   transition: var(--transition);
+  border-style: solid;
+  border-color: #000000;
 }
 
 .option-section:hover {
@@ -340,7 +342,7 @@
 }
 
 .logout-btn {
-  background: radial-gradient(transparent,rgba(211, 18, 18, 0.667));
+  background: radial-gradient(#ac1d0a, #491a14); 
   color: white;
   border: none;
   padding: 16px 32px;

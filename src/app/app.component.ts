@@ -42,7 +42,8 @@ export class AppComponent {
       '/Reportes',
       '/Configuraciones_admi',
       '/Perfil',
-      '/Mapas_admi'
+      '/Mapas_admi',
+      '/Proyectos',
 
     ].includes(this.currentRoute);
   }

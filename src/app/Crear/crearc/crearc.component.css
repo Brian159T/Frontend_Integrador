@@ -7,7 +7,7 @@ html, body {
   }
   .Login{
       width: 700px;
-      height: 400px;
+      height: 600px;
       background:radial-gradient(transparent,#000a);
       border-radius: 20px;
       display: flex;
@@ -105,11 +105,11 @@ html, body {
     width: 600px;
     border-style: double;
     border-width: 6px;
-    background: radial-gradient(transparent, #6d271e); 
+    background: radial-gradient(#5c2f29, #491a14); 
     transition: transform 0.2s ease;
     text-decoration: none;
     border-color:black;
-    padding-top: 10px;
+    padding:center;
   }
   .mensaje_flash{
     position: fixed; 

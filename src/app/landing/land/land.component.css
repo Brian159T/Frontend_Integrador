@@ -64,7 +64,7 @@ nav {
 }
 
 .login-btn {
-    background-color: #c41a1f;
+    background: radial-gradient(#ac1d0a, #491a14); 
     color: #ffffff;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -173,6 +173,7 @@ nav {
 }
 
 .section-title {
+    
     text-align: center;
     margin-bottom: 3rem;
 }
@@ -196,12 +197,14 @@ nav {
 }
 
 .feature-card {
-    background-color: #ffffff;
-    border-radius: 8px;
+    background: radial-gradient(#457dcc, #1a3152);
+    border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
     border-top: 4px solid #0a1a35;
+    border-style: solid;
+    ;
 }
 
 .feature-card:nth-child(2) {
@@ -243,7 +246,7 @@ nav {
 
 /* Sección Cómo funciona */
 .how-it-works {
-    background-color: #f5f5f5;
+    background: radial-gradient(#34694f, #053d22);
     padding: 5rem 2rem;
 }
 
