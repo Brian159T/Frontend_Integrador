@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+.custom-snackbar {
+  font-size: 60px;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 500px;
+  font-family: sans-serif;
+  background-color: #295f2b; /* verde de éxito */
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.error-snackbar {
+  font-size: 60px;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 500px;
+  font-family: sans-serif;
+  background-color: #af0c0c; /* verde de éxito */
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

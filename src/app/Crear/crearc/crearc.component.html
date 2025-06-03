@@ -1,26 +1,55 @@
+<div class="Fondo">
+  <div class="Descripcion">
+    <h1 class="Titulo">Crea una Cuenta</h1>
+  </div>
+  <form class="Login" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    <input
+      type="email"
+      class="entradas"
+      placeholder="Correo"
+      required
+      formControlName="correo"
+    />
 
-    <div class="Fondo">
-        <div class="Descripcion">
-            <h1 class="Titulo">Crea una Cuenta</h1>
-            
-    
-        </div>
-        <form class="Login" method="post" action="/registrar_usuario">
-            <input type="email" class="entradas"  placeholder="Correo" required name="email" >
-            <input type="password" class="entradas" placeholder="Contraseña" required name="password"> 
-            <input type="text" class="entradas" placeholder="Coordenadas" required name="Coordenadas">
-            <input type="number" class="entradas" placeholder="Nro de Celular" required name="celular">
-            <input type="text" class="entradas" placeholder="Nombre de usuario" required name="nombre">                   
-            <input class="Boton_registrar" type="submit" value="Crear Cuenta">
-    
-            <a class="Boton_volver" routerLink="/login" routerLinkActive="active">Volver</a>
-            <label Class="Mostrarc">
-                <input type="checkbox" name="opcion1" value="valor1">
-                Mostrar Contraseña
-            </label>
-        </form>
-        
+    <input
+      [type]="verPassword ? 'text' : 'password'"
+      class="entradas"
+      placeholder="Contraseña"
+      required
+      formControlName="password"
+    />
 
-    </div>
-   
     
+    <input
+      type="text"
+      class="entradas"
+      placeholder="Coordenadas"
+      required
+      formControlName="coordenadas"
+    />
+
+    <input
+      type="number"
+      class="entradas"
+      placeholder="Nro de Celular"
+      required
+      formControlName="celular"
+    />
+
+    <input
+      type="text"
+      class="entradas"
+      placeholder="Nombre de usuario"
+      required
+      formControlName="nombre"
+    />
+    <label class="Mostrarc">
+      <input type="checkbox" (change)="verPassword = !verPassword" />
+      Mostrar Contraseña
+    </label>
+
+
+    <input class="Boton_registrar" type="submit" value="Crear Cuenta" />
+    <a class="Boton_volver" routerLink="/login" routerLinkActive="active">Volver</a>
+  </form>
+</div>

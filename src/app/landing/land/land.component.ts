@@ -6,20 +6,21 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './land.component.html',
-  styleUrls: ['./land.component.css']  // ← corregido aquí
+  styleUrls: ['./land.component.css']
 })
-export default class LandComponent implements AfterViewInit {  // ← implementa AfterViewInit
+export default class LandComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 100); // espera a que el DOM esté listo
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100); // espera a que el DOM esté listo
+        }
       }
     }
   }
-
 }

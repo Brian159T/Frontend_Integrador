@@ -7,6 +7,6 @@ import { RouterModule } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export default class LoginComponent {
+export class LoginComponent {
 
 }

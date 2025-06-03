@@ -15,20 +15,18 @@ import { PerfilUsuarioComponent } from './Paginas/perfil-usuario/perfil-usuario.
 import { MapasAdmiComponent } from './Paginas/mapas-admi/mapas-admi.component';
 import { ReportesUsuarioComponent } from './Paginas/reportes-usuario/reportes-usuario.component';
 import { ProyectosComponent } from './Paginas/proyectos/proyectos.component';
+import { CrearcComponent } from './Crear/crearc/crearc.component';
+import { LoginComponent } from './authentication/login/login.component';
+
 
 export const routes: Routes = [
-    {
-    path: '',
-    loadComponent: () => import('./app.component').then(m => m.AppComponent)
-  },
+   
   {
-    path:'login',
-    loadComponent: ()=>import('./authentication/login/login.component')
+    path:'login',component:LoginComponent
 
   },
   {
-    path:'crear',
-    loadComponent:()=>import('./Crear/crearc/crearc.component')
+    path:'crear',component:CrearcComponent
 
   },
   {
@@ -47,7 +45,7 @@ export const routes: Routes = [
 
   },
   {
-    path:'land',
+    path:'',
     loadComponent:()=>import('./landing/land/land.component')
 
   },
