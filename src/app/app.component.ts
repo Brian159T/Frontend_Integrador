@@ -44,6 +44,7 @@ export class AppComponent {
       '/Perfil',
       '/Mapas_admi',
       '/Proyectos',
+      '/Graficos_admi',
 
     ].includes(this.currentRoute);
   }

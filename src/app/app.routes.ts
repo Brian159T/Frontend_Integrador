@@ -17,12 +17,17 @@ import { ReportesUsuarioComponent } from './Paginas/reportes-usuario/reportes-us
 import { ProyectosComponent } from './Paginas/proyectos/proyectos.component';
 import { CrearcComponent } from './Crear/crearc/crearc.component';
 import { LoginComponent } from './authentication/login/login.component';
+import { GraficosAdmiComponent } from './Paginas/graficos-admi/graficos-admi.component';
 
 
 export const routes: Routes = [
    
   {
     path:'login',component:LoginComponent
+
+  },
+  {
+    path:'Graficos_admi',component:GraficosAdmiComponent
 
   },
   {
