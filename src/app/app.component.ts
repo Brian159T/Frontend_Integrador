@@ -45,6 +45,7 @@ export class AppComponent {
       '/Mapas_admi',
       '/Proyectos',
       '/Graficos_admi',
+      '/Cargar_alertas',
 
     ].includes(this.currentRoute);
   }

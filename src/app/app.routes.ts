@@ -18,6 +18,7 @@ import { ProyectosComponent } from './Paginas/proyectos/proyectos.component';
 import { CrearcComponent } from './Crear/crearc/crearc.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { GraficosAdmiComponent } from './Paginas/graficos-admi/graficos-admi.component';
+import { CargaAlertasComponent } from './Paginas/carga-alertas/carga-alertas.component';
 
 
 export const routes: Routes = [
@@ -28,6 +29,10 @@ export const routes: Routes = [
   },
   {
     path:'Graficos_admi',component:GraficosAdmiComponent
+
+  },
+  {
+    path:'Cargar_alertas',component:CargaAlertasComponent
 
   },
   {

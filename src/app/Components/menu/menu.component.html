@@ -11,19 +11,26 @@
 
           <a class="nav-link" routerLink="/Usuarios">
             <i class="bi bi-people-fill me-2" style="color: #4caf50;"></i> Usuarios
-
           </a>
 
-          <a class="nav-link" routerLink="/Alertas">
-            <i class="bi bi-exclamation-triangle-fill text-danger me-2"></i> Alertas
+          <!-- Submenú Alertas -->
+          <a class="nav-link" data-bs-toggle="collapse" href="#sub-menu-alertas" role="button" aria-expanded="false" aria-controls="sub-menu-alertas">
+            <i class="bi bi-exclamation-triangle-fill text-danger me-2"></i> Alertas <i class="bi bi-caret-down-fill float-end"></i>
           </a>
+          <div class="collapse ps-4" id="sub-menu-alertas">
+            <a class="nav-link" routerLink="/Cargar_alertas">
+              <i class="bi bi-folder-symlink-fill me-2" style="color: #ff9800;"></i> Cargar Alerta
+            </a>
+            <a class="nav-link" routerLink="/Alertas">
+              <i class="bi bi-lightning-fill me-2" style="color: #ff9800;"></i> Alertas Activas
+            </a>
+          </div>
 
-          <!-- Menú con subopciones -->
-          <a class="nav-link" data-bs-toggle="collapse" href="#sub-menu" role="button" aria-expanded="false" aria-controls="sub-menu">
+          <!-- Submenú Proyectos -->
+          <a class="nav-link" data-bs-toggle="collapse" href="#sub-menu-proyectos" role="button" aria-expanded="false" aria-controls="sub-menu-proyectos">
             <i class="bi bi-box-seam me-2"></i> Proyectos <i class="bi bi-caret-down-fill float-end"></i>
           </a>
-
-          <div class="collapse ps-4" id="sub-menu">
+          <div class="collapse ps-4" id="sub-menu-proyectos">
             <a class="nav-link" routerLink="/Proyectos">
               <i class="bi bi-folder-fill me-2" style="color: #ff9800;"></i> Proyecto 1
             </a>
@@ -35,35 +42,38 @@
             </a>
           </div>
 
-          <a class="nav-link" data-bs-toggle="collapse" href="#sub-menu" role="button" aria-expanded="false" aria-controls="sub-menu">
-            <i class="bi bi-bar-chart-line-fill text-primary me-2"></i> Graficos <i class="bi bi-caret-down-fill float-end"></i>
+          <!-- Submenú Gráficos -->
+          <a class="nav-link" data-bs-toggle="collapse" href="#sub-menu-graficos" role="button" aria-expanded="false" aria-controls="sub-menu-graficos">
+            <i class="bi bi-bar-chart-line-fill text-primary me-2"></i> Gráficos <i class="bi bi-caret-down-fill float-end"></i>
           </a>
-
-          <div class="collapse ps-4" id="sub-menu">
+          <div class="collapse ps-4" id="sub-menu-graficos">
             <a class="nav-link" routerLink="/Graficos_admi">
               <i class="bi bi-graph-down text-primary me-2"></i> Gráficos
             </a>
             <a class="nav-link" routerLink="/Proyecto2">
-              <i class="bi bi-bar-chart-line-fill text-primary me-2"></i> Grafico Barras
+              <i class="bi bi-bar-chart-line-fill text-primary me-2"></i> Gráfico Barras
             </a>
             <a class="nav-link" routerLink="/Proyecto3">
               <i class="bi bi-pie-chart-fill text-primary me-2"></i> Gráfico Circular 
             </a>
           </div>
 
-
           <a class="nav-link" routerLink="/Configuraciones_admi">
             <i class="bi bi-gear me-2"></i> Configuraciones
           </a>
+
           <a class="nav-link" routerLink="/Mapas_admi">
             <i class="bi bi-map me-2"></i> Mapas
           </a>
+
           <a class="nav-link" routerLink="/Reportes">
             <i class="bi bi-file-earmark-bar-graph-fill text-info me-2"></i> Reportes
           </a>
+
           <a class="nav-link" routerLink="/Perfil">
             <i class="bi bi-person-circle me-2"></i> Perfil
           </a>
+
           <a class="nav-link" routerLink="/">
             <i class="bi bi-box-arrow-right me-2"></i> Salir
           </a>
@@ -72,7 +82,6 @@
       </div>
     </div>
 
-    <!-- Aquí puedes agregar otra columna con contenido -->
     <div class="col-9">
       <!-- Contenido principal -->
     </div>

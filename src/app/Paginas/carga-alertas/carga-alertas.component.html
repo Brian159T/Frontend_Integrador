@@ -1,0 +1,75 @@
+<div class="container-fluid">
+  <div class="row g-0">
+    <!-- Columna para el sidebar -->
+    <div class="col-1">
+      <!-- Puedes agregar contenido del sidebar aquí si es necesario -->
+    </div>
+
+    <!-- Columna principal -->
+    <div class="col-11">
+      <div class="Fondo">
+        <div class="Descripcion">
+          <!-- Título o descripción opcional -->
+        </div>
+
+        <form class="Login" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+          <input
+            type="text"
+            class="entradas"
+            placeholder="Cuenca"
+            required
+            formControlName="cuenca"
+          />
+
+          <input
+            type="text"
+            class="entradas"
+            placeholder="Rio"
+            required
+            formControlName="rio"
+          />
+
+          <input
+            type="number"
+            class="entradas"
+            placeholder="Nivel actual"
+            required
+            formControlName="nivel"
+          />
+
+          <input
+            type="text"
+            class="entradas"
+            placeholder="Condición"
+            required
+            formControlName="condicion"
+          />
+
+          <input
+            type="text"
+            class="entradas"
+            placeholder="Pronóstico"
+            required
+            formControlName="pronostico"
+          />
+
+          <input
+            type="text"
+            class="entradas"
+            placeholder="Periodo"
+            required
+            formControlName="periodo"
+          />
+
+          <input
+            class="Boton_registrar"
+            type="submit"
+            value="Guardar"
+          />
+
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
