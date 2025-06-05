@@ -46,6 +46,7 @@ export class AppComponent {
       '/Proyectos',
       '/Graficos_admi',
       '/Cargar_alertas',
+      '/anadir',
 
     ].includes(this.currentRoute);
   }

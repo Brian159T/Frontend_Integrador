@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row g-0">
     <div class="col-2">
-      <!-- Espacio reservado para sidebar u otros -->
+      <!-- Espacio reservado para sidebar -->
     </div>
 
     <div class="col-10">
@@ -10,31 +10,29 @@
           <tr>
             <th>Cuenca</th>
             <th>Río</th>
-            <th>Nivel Actual</th>
+            <th>Nivel</th>
             <th>Condición</th>
             <th>Pronóstico</th>
-            <th>Período</th>
-            <th>Acción</th>
+            <th>Periodo</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
-          <!-- Fila de ejemplo -->
-          <tr>
-            <td>Taquina</td>
-            <td>Río Rocha</td>
-            <td>120 m³/s</td>
-            <td>Elevado</td>
-            <td>Lluvias intensas</td>
-            <td>24 horas</td>
+          <tr *ngFor="let alerta of alertas">
+            <td>{{ alerta.Cuencas }}</td>
+            <td>{{ alerta.Rios }}</td>
+            <td>{{ alerta.Niveles }} m</td>
+            <td>{{ alerta.Condiciones }}</td>
+            <td>{{ alerta.Pronosticos }}</td>
+            <td>{{ alerta.Periodos }}</td>
             <td>
-              <button class="btn btn-sm btn-danger">
-                <i class="bi bi-exclamation-triangle-fill me-1"></i> Alertar
-              </button>
+              <button class="btn btn-sm btn-warning" (click)="editarAlerta(alerta)">Editar</button>
+              <button class="btn btn-sm btn-danger" (click)="eliminarAlerta(alerta.id_alertas)">Eliminar</button>
             </td>
           </tr>
-          <!-- Más filas aquí -->
         </tbody>
       </table>
     </div>
   </div>
 </div>
+

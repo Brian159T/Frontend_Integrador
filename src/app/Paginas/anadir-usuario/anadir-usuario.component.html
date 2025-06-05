@@ -1,0 +1,64 @@
+<div class="Fondo">
+  <div class="Descripcion">
+    
+  </div>
+  <form class="Login" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    <input
+      type="email"
+      class="entradas"
+      placeholder="Correo"
+      required
+      formControlName="correo"
+    />
+
+    <input
+      [type]="verPassword ? 'text' : 'password'"
+      class="entradas"
+      placeholder="Contraseña"
+      required
+      formControlName="password"
+    />
+
+    
+    <input
+      type="text"
+      class="entradas"
+      placeholder="Coordenadas"
+      required
+      formControlName="coordenadas"
+    />
+
+    <input
+      type="number"
+      class="entradas"
+      placeholder="Nro de Celular"
+      required
+      formControlName="celular"
+    />
+
+    <input
+      type="text"
+      class="entradas"
+      placeholder="Nombre de usuario"
+      required
+      formControlName="nombre"
+    />
+
+    <input
+      type="text"
+      class="entradas"
+      placeholder="Rol"
+      required
+      formControlName="rol"
+    />
+    <label class="Mostrarc">
+      <input type="checkbox" (change)="verPassword = !verPassword" />
+      Mostrar Contraseña
+    </label>
+
+
+    <input class="Boton_registrar" type="submit" value="Crear Cuenta" />
+    
+  </form>
+</div>
+

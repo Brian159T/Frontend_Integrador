@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row g-0">
     <div class="col-2">
-      
+      <!-- Espacio reservado para sidebar u otros -->
     </div>
     
     <div class="col-9">
@@ -17,19 +17,17 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Ejemplo de fila -->
-          <tr>
-            <td>ejemploemail.com</td>
-            <td>••••••••</td>
-            <td>40.7128° N, 74.0060° W</td>
-            <td>1234567890</td>
-            <td>usuario1</td>
+          <tr *ngFor="let usuario of usuarios">
+            <td>{{ usuario.Correos }}</td>
+            <td>••••••••</td> <!-- Seguridad: ocultamos la contraseña -->
+            <td>{{ usuario.Coordenadas }}</td>
+            <td>{{ usuario.Celulares }}</td>
+            <td>{{ usuario.Nombres }}</td>
             <td>
-              <button class="btn btn-sm btn-warning">Editar</button>
-              <button class="btn btn-sm btn-danger">Eliminar</button>
-            </td>
+  <button class="btn btn-sm btn-warning" (click)="editarUsuario(usuario)">Editar</button>
+  <button class="btn btn-sm btn-danger" (click)="eliminarUsuario(usuario.id_usuarios)">Eliminar</button>
+</td>
           </tr>
-          <!-- Más filas aquí -->
         </tbody>
       </table>
     </div>

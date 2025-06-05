@@ -9,9 +9,19 @@
             <i class="bi bi-speedometer2 text-primary me-2"></i> Panel de Control
           </a>
 
-          <a class="nav-link" routerLink="/Usuarios">
+          
+
+          <a class="nav-link" data-bs-toggle="collapse" href="#sub-menu-usuarios" role="button" aria-expanded="false" aria-controls="sub-menu-usuarios">
+            <i class="bi bi-people text-info me-2"></i> Usuarios <i class="bi bi-caret-down-fill float-end"></i>
+          </a>
+          <div class="collapse ps-4" id="sub-menu-usuarios">
+            <a class="nav-link" routerLink="/Usuarios">
             <i class="bi bi-people-fill me-2" style="color: #4caf50;"></i> Usuarios
           </a>
+            <a class="nav-link" routerLink="/anadir">
+              <i class="bi bi-person-plus me-2" style="color: #ff9800;"></i> Añadir usuario
+            </a>
+          </div>
 
           <!-- Submenú Alertas -->
           <a class="nav-link" data-bs-toggle="collapse" href="#sub-menu-alertas" role="button" aria-expanded="false" aria-controls="sub-menu-alertas">

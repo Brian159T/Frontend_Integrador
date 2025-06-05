@@ -19,12 +19,17 @@ import { CrearcComponent } from './Crear/crearc/crearc.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { GraficosAdmiComponent } from './Paginas/graficos-admi/graficos-admi.component';
 import { CargaAlertasComponent } from './Paginas/carga-alertas/carga-alertas.component';
+import { AnadirUsuarioComponent } from './Paginas/anadir-usuario/anadir-usuario.component';
 
 
 export const routes: Routes = [
    
   {
     path:'login',component:LoginComponent
+
+  },
+  {
+    path:'anadir',component:AnadirUsuarioComponent
 
   },
   {
