@@ -9,7 +9,7 @@
         <thead class="table-dark">
           <tr>
             <th>Río</th>
-            <th>Nivel</th>
+            <th>Caudal</th>
             <th>Condición</th>
             <th>Pronóstico</th>
             <th>Período</th>
@@ -18,7 +18,7 @@
         <tbody>
           <tr *ngFor="let alerta of alertas">
             <td>{{ alerta.Rios }}</td>
-            <td>{{ alerta.Niveles }} m</td>
+            <td>{{ alerta.Niveles }} m3/s</td>
             <td>{{ alerta.Condiciones }}</td>
             <td>{{ alerta.Pronosticos }}</td>
             <td>{{ alerta.Periodos }}</td>

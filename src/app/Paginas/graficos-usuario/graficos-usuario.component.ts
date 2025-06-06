@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-graficos-usuario',
-  imports: [],
   templateUrl: './graficos-usuario.component.html',
-  styleUrl: './graficos-usuario.component.css'
+  styleUrls: ['./graficos-usuario.component.css']
 })
 export class GraficosUsuarioComponent {
-
+  graficoBarrasUrl = 'http://localhost:5000/api/grafico-barras';
+  graficoTortaUrl = 'http://localhost:5000/api/grafico-torta';
 }

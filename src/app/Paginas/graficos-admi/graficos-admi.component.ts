@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class GraficosAdmiComponent {
 
+  graficoBarrasUrl = 'http://localhost:5000/api/grafico-barras';
+  graficoTortaUrl = 'http://localhost:5000/api/grafico-torta';
+
 }

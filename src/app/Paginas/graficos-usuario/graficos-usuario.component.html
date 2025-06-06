@@ -1,156 +1,27 @@
 <div class="fondo">
-    <div class="container-fluid">
-  <div class="row">
-    <!-- Sidebar -->
-    <div class="col-2">
-      <!-- Aquí podrías colocar tu barra lateral o navegación -->
-    </div>
+  <div class="container-fluid">
+    <div class="row">
 
-    <!-- Contenido principal -->
-    <div class="col-9">
-      <!-- Stats Cards -->
-      <div class="stats-row">
-        <div class="stat-card">
-          <div class="stat-header">Audience</div>
-          <div class="stat-value">100%</div>
-          <div class="stat-subtitle">Users</div>
-          <div class="progress-circle">
-            <div class="progress-text">100%</div>
-          </div>
-        </div>
+      <div class="col-2">
+        <!-- Sidebar vacío -->
+      </div>
 
-        <div class="stat-card">
-          <div class="stat-header">Audience</div>
-          <div class="stat-value">30%</div>
-          <div class="stat-subtitle">Users</div>
-          <div class="progress-circle" style="background: conic-gradient(#4caf50 0deg 108deg, rgba(255, 255, 255, 0.2) 108deg 360deg);">
-            <div class="progress-text">30%</div>
-          </div>
-        </div>
+      <div class="col-10">
+        <div class="graficos-flex my-5">
 
-        <div class="stat-card">
-          <div class="stat-header">Audience</div>
-          <div class="stat-value">73%</div>
-          <div class="stat-subtitle">Users</div>
-          <div class="progress-circle" style="background: conic-gradient(#4caf50 0deg 263deg, rgba(255, 255, 255, 0.2) 263deg 360deg);">
-            <div class="progress-text">73%</div>
+          <div class="grafico-contenedor">
+            <h4>Gráfico de Barras</h4>
+            <img [src]="graficoBarrasUrl" alt="Gráfico de barras" class="grafico_barras">
           </div>
-        </div>
 
-        <div class="stat-card">
-          <div class="stat-header">Overview</div>
-          <div class="stat-value">Visit</div>
-          <div class="mini-chart">
-            <div class="mini-bars">
-              <div class="mini-bar" style="height: 60%;"></div>
-              <div class="mini-bar" style="height: 80%;"></div>
-              <div class="mini-bar" style="height: 40%;"></div>
-              <div class="mini-bar" style="height: 90%;"></div>
-              <div class="mini-bar" style="height: 70%;"></div>
-              <div class="mini-bar" style="height: 50%;"></div>
-            </div>
+          <div class="grafico-contenedor">
+            <h4>Gráfico de Torta</h4>
+            <img [src]="graficoTortaUrl" alt="Gráfico de torta" class="grafico">
           </div>
+
         </div>
       </div>
 
-      <!-- Comparison Graph -->
-      <div class="chart-section">
-        <div class="chart-title">Comparison graph</div>
-        <div class="chart-container">
-          <div class="chart-points d-flex justify-content-around">
-            <div class="text-center">
-              <div class="chart-bar" style="height: 60%;"></div>
-              <div class="chart-label">Jan</div>
-            </div>
-            <div class="text-center">
-              <div class="chart-bar" style="height: 45%;"></div>
-              <div class="chart-label">Feb</div>
-            </div>
-            <div class="text-center">
-              <div class="chart-bar" style="height: 70%;"></div>
-              <div class="chart-label">Mar</div>
-            </div>
-            <div class="text-center">
-              <div class="chart-bar" style="height: 55%;"></div>
-              <div class="chart-label">Apr</div>
-            </div>
-            <div class="text-center">
-              <div class="chart-bar" style="height: 80%;"></div>
-              <div class="chart-label">May</div>
-            </div>
-            <div class="text-center">
-              <div class="chart-bar" style="height: 65%;"></div>
-              <div class="chart-label">Jun</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Data Tables -->
-      <div class="data-section">
-        <div class="data-table">
-          <div class="table-header">Concept Analysis</div>
-          <div class="table-row">
-            <div class="table-cell">Concept</div>
-            <div class="table-cell">Qty</div>
-            <div class="table-cell table-value">Total</div>
-          </div>
-          <div class="table-row">
-            <div class="table-cell">Information</div>
-            <div class="table-cell">45</div>
-            <div class="table-cell table-value">1,234</div>
-          </div>
-          <div class="table-row">
-            <div class="table-cell">Analytics</div>
-            <div class="table-cell">32</div>
-            <div class="table-cell table-value">987</div>
-          </div>
-          <div class="table-row">
-            <div class="table-cell">Performance</div>
-            <div class="table-cell">28</div>
-            <div class="table-cell table-value">756</div>
-          </div>
-        </div>
-
-        <div class="data-table">
-          <div class="table-header">Detailed Metrics</div>
-          <div class="mini-chart d-grid" style="grid-template-columns: repeat(10, 1fr); gap: 2px; padding: 10px;">
-            <div class="dot bg-success"></div>
-            <div class="dot bg-success"></div>
-            <div class="dot bg-light"></div>
-            <div class="dot bg-success"></div>
-            <div class="dot bg-light"></div>
-            <div class="dot bg-success"></div>
-            <div class="dot bg-success"></div>
-            <div class="dot bg-light"></div>
-            <div class="dot bg-success"></div>
-            <div class="dot bg-success"></div>
-          </div>
-        </div>
-
-        <div class="data-table">
-          <div class="table-header">Dynamics</div>
-          <div class="table-row">
-            <div class="table-cell">Time</div>
-            <div class="table-cell table-value">28%</div>
-          </div>
-          <div class="mini-chart">
-            <div class="mini-bars">
-              <div class="mini-bar" style="height: 30%;"></div>
-              <div class="mini-bar" style="height: 60%;"></div>
-              <div class="mini-bar" style="height: 40%;"></div>
-              <div class="mini-bar" style="height: 80%;"></div>
-              <div class="mini-bar" style="height: 50%;"></div>
-              <div class="mini-bar" style="height: 70%;"></div>
-              <div class="mini-bar" style="height: 45%;"></div>
-              <div class="mini-bar" style="height: 85%;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-</div>
-
-
 </div>

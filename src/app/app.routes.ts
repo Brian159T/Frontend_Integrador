@@ -20,12 +20,32 @@ import { LoginComponent } from './authentication/login/login.component';
 import { GraficosAdmiComponent } from './Paginas/graficos-admi/graficos-admi.component';
 import { CargaAlertasComponent } from './Paginas/carga-alertas/carga-alertas.component';
 import { AnadirUsuarioComponent } from './Paginas/anadir-usuario/anadir-usuario.component';
+import { BarrasUsuarioComponent } from './Paginas/barras-usuario/barras-usuario.component';
+import { CirculouComponent } from './Paginas/circulou/circulou.component';
+import { BarrasaComponent } from './Paginas/barrasa/barrasa.component';
+import { CirculoaComponent } from './Paginas/circuloa/circuloa.component';
 
 
 export const routes: Routes = [
    
   {
     path:'login',component:LoginComponent
+
+  },
+  {
+    path:'circuloa',component:CirculoaComponent
+
+  },
+  {
+    path:'barrasa',component:BarrasaComponent
+
+  },
+  {
+    path:'circulou',component:CirculouComponent
+
+  },
+  {
+    path:'barrasu',component:BarrasUsuarioComponent
 
   },
   {

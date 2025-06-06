@@ -1,3 +1,24 @@
+.graficos-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.grafico-contenedor {
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.grafico_c {
+  width: 100%;
+  max-width: 700px; /* Ajusta según el tamaño deseado */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
         * {
             margin: 0;
@@ -287,31 +308,3 @@
         .stat-card, .chart-section, .data-table {
             animation: fadeInUp 0.6s ease-out;
         }
-
-        .grafico {
-          width: 400px;
-          height: auto; /* O puedes definir altura fija como height: 400px */
-          display: block;
-          margin: 0 auto;
-        }
-        .grafico_barras {
-          width: 400px;
-          height: 400px; /* O puedes definir altura fija como height: 400px */
-          display: block;
-          margin: 0 auto;
-        }
-        
-        .graficos-flex {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-       .grafico-contenedor {
-           text-align: center;
-           margin-left: 1.5rem; /* Equivalente a mx-4 */
-           margin-right: 1.5rem;
-        }
-    

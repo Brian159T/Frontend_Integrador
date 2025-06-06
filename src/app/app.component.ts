@@ -47,6 +47,8 @@ export class AppComponent {
       '/Graficos_admi',
       '/Cargar_alertas',
       '/anadir',
+      '/barrasa',
+      '/circuloa',
 
     ].includes(this.currentRoute);
   }
@@ -61,6 +63,8 @@ export class AppComponent {
       '/Configuraciones_usuario',
       '/Perfil_usuario',
       '/Reportes_usuario',
+      '/barrasu',
+      '/circulou',
      
       
     ].includes(this.currentRoute);
