@@ -59,4 +59,32 @@ export class AlertasComponent implements OnInit {
       }
     });
   }
+  alertarUsuario(alerta: any): void {
+  const numeroDestino = prompt('Ingrese el número de WhatsApp del destinatario (ej: +59171234567):');
+
+  if (!numeroDestino || !numeroDestino.startsWith('+')) {
+    alert('⚠️ Número no válido. Debe incluir el código de país (ej: +591...)');
+    return;
+  }
+
+  this.http.post('http://localhost:5000/api/alertar', {
+    numero: numeroDestino,
+    alerta: alerta
+  }).subscribe({
+    next: (respuesta) => {
+      console.log('✅ Alerta enviada:', respuesta);
+      alert('📤 Alerta enviada con éxito');
+    },
+    error: (error) => {
+      console.error('❌ Error al enviar la alerta:', error);
+      alert('⚠️ Ocurrió un error al enviar la alerta');
+    }
+  });
+}
+
+
+
+
+
+
 }
