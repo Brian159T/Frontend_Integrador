@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { CoordenadasModalComponent } from '../../coordenadas-modal/coordenadas-modal.component';
 
 @Component({
   selector: 'app-crearc',
@@ -12,7 +14,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     RouterLink,
     CommonModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   templateUrl: './crearc.component.html',
   styleUrls: ['./crearc.component.css']
@@ -20,7 +23,6 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 export class CrearcComponent implements OnInit {
   
   verPassword: boolean = false;
-
   registroForm = new FormGroup({
     correo: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),
@@ -30,9 +32,11 @@ export class CrearcComponent implements OnInit {
     rol: new FormControl('Usuario')
   });
 
- 
-
-  constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
+  constructor(
+    private http: HttpClient,
+    private snackBar: MatSnackBar,
+    private dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {}
 
@@ -40,20 +44,16 @@ export class CrearcComponent implements OnInit {
     if (this.registroForm.valid) {
       const apiUrl = 'http://localhost:5000/api/registrar_usuario';
       this.http.post(apiUrl, this.registroForm.value).subscribe(
-        (response) => {
-          console.log('Formulario enviado con éxito:', response);
+        response => {
           this.snackBar.open('Cuenta Creada Correctamente.', 'Cerrar', {
             duration: 3000,
             horizontalPosition: 'right',
             verticalPosition: 'top',
             panelClass: ['custom-snackbar']
           });
-          this.registroForm.reset({
-            rol: 'Usuario'
-          });
+          this.registroForm.reset({ rol: 'Usuario' });
         },
-        (error) => {
-          console.error('Error al enviar el formulario:', error);
+        error => {
           this.snackBar.open('Error al enviar el formulario.', 'Cerrar', {
             duration: 3000,
             horizontalPosition: 'right',
@@ -70,5 +70,21 @@ export class CrearcComponent implements OnInit {
         panelClass: ['error-snackbar']
       });
     }
+  }
+
+  abrirModalCoordenadas() {
+    const dialogRef = this.dialog.open(CoordenadasModalComponent, {
+      width: '90vw',
+      height: '80vh',
+      maxWidth: '100vw',
+      panelClass: 'custom-dialog-container'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result && result.lat && result.lng) {
+        const coordenadas = `${result.lat},${result.lng}`;
+        this.registroForm.get('coordenadas')?.setValue(coordenadas);
+      }
+    });
   }
 }

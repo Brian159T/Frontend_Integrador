@@ -80,14 +80,14 @@ nav {
 }
 
 /* Sección Hero */
-.hero {
+/* .hero {
     background: linear-gradient(135deg, #0a1a35 0%, #0a3522 100%);
     position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
-}
+} */
 
 .hero::before {
     content: "";
@@ -101,7 +101,7 @@ nav {
     opacity: 0.1;
 }
 
-.hero-content {
+/* .hero-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -110,7 +110,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
+} */
 
 .hero h1 {
     color: #ffffff;
@@ -365,4 +365,67 @@ footer {
     .footer-logo, .footer-links {
         flex-basis: 100%;
     }
+}
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: #001f3f; 
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #001f3f; /* Azul oscuro */
+  text-align: center;
+
+  padding: 20px;
+  background-color: transparent;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.primary-btn {
+  background-color: #007BFF;
+  color: white;
+}
+
+.secondary-btn {
+  background-color: #6c757d;
+  color: white;
+}
+.azul-oscuro {
+  color: #001f3f; /* Azul oscuro, puedes cambiar el código si deseas otro tono */
 }

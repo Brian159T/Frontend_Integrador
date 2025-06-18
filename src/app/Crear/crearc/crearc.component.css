@@ -120,3 +120,49 @@ html, body {
   font-family: sans-serif;
   font-style: italic;
 }
+.acomodar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10; /* Elimina espacio entre input y botón */
+}
+
+.entradas2 {
+  width: calc(100% - 100px); /* Resta el ancho del botón */
+  
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 40px;
+  font-size: 20px;
+  box-sizing: border-box;
+   margin-bottom: 30px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+
+}
+
+
+.acomodar button {
+  height: 40px;
+  width: 100px;
+  
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 16px;
+  border: none;
+  background: radial-gradient(transparent, #37475e);
+  color: white;
+  cursor: pointer;
+  font-family: italic;
+   margin-bottom: 30px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  border-style: double;
+  border-color: black;
+
+
+}
+
