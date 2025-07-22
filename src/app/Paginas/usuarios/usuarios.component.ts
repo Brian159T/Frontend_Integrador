@@ -45,7 +45,8 @@ export class UsuariosComponent implements OnInit {
   editarUsuario(usuario: any): void {
     const datosActualizados = {
       Correos: prompt('Nuevo correo:', usuario.Correos) || usuario.Correos,
-      Coordenadas: prompt('Nuevas coordenadas:', usuario.Coordenadas) || usuario.Coordenadas,
+      Latitudes: prompt('Nuevas Latitudes:', usuario.Latitudes) || usuario.Latitudes,
+      Longitudes: prompt('Nuevas Longitudes:', usuario.Longitudes) || usuario.Longitudes,
       Celulares: prompt('Nuevo celular:', usuario.Celulares) || usuario.Celulares,
       Nombres: prompt('Nuevo nombre:', usuario.Nombres) || usuario.Nombres
     };

@@ -22,7 +22,8 @@ export class AnadirUsuarioComponent implements OnInit {
   registroForm = new FormGroup({
     correo: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),
-    coordenadas: new FormControl('', Validators.required),
+    latitud: new FormControl('', Validators.required),
+    longitud: new FormControl('', Validators.required),
     celular: new FormControl('', Validators.required),
     nombre: new FormControl('', Validators.required),
     rol: new FormControl('', Validators.required),

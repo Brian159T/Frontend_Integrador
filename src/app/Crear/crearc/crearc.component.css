@@ -142,6 +142,20 @@ html, body {
   font-size: 20px;
 
 }
+.entradas22 {
+  width: 100%;
+  
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 40px;
+  font-size: 20px;
+  box-sizing: border-box;
+   margin-bottom: 30px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+
+}
 
 
 .acomodar button {

@@ -4,13 +4,14 @@
       <!-- Espacio reservado para sidebar u otros -->
     </div>
     
-    <div class="col-9">
+    <div class="col-10">
       <table class="table table-striped table-bordered">
         <thead class="table-dark">
           <tr>
             <th>Correo</th>
             <th>Contraseña</th>
-            <th>Coordenadas</th>
+            <th>Latitud</th>
+            <th>Longitud</th>
             <th>Celular</th>
             <th>Nombre Usuario</th>
             <th>Acciones</th>
@@ -20,7 +21,8 @@
           <tr *ngFor="let usuario of usuarios">
             <td>{{ usuario.Correos }}</td>
             <td>••••••••</td> <!-- Seguridad: ocultamos la contraseña -->
-            <td>{{ usuario.Coordenadas }}</td>
+            <td>{{ usuario.Latitudes }}</td>
+            <td>{{ usuario.Longitudes}}</td>
             <td>{{ usuario.Celulares }}</td>
             <td>{{ usuario.Nombres }}</td>
             <td>

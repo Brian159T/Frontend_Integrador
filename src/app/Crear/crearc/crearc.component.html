@@ -2,6 +2,7 @@
   <div class="Descripcion">
     <h1 class="Titulo">Crea una Cuenta</h1>
   </div>
+
   <form class="Login" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
     <input
       type="email"
@@ -21,17 +22,24 @@
 
     <div class="acomodar">
       <input
-      type="text"
-      class="entradas2"
-      placeholder="Coordenadas"
-      required
-      formControlName="coordenadas"
-    />
-    <button type="button" class="" (click)="abrirModalCoordenadas()">Buscar</button>
+        type="text"
+        class="entradas2"
+        placeholder="latitud"
+        required
+        formControlName="latitud"
+      />
+      <button type="button" (click)="abrirModalCoordenadas()">Buscar</button>
+    </div> <!-- ✅ Cerramos el primer div correctamente -->
 
-
+    <div class="acomodar">
+      <input
+        type="text"
+        class="entradas22"
+        placeholder="longitud"
+        required
+        formControlName="longitud"
+      />
     </div>
-    
 
     <input
       type="number"
@@ -48,13 +56,14 @@
       required
       formControlName="nombre"
     />
+
     <label class="Mostrarc">
       <input type="checkbox" (change)="verPassword = !verPassword" />
       Mostrar Contraseña
     </label>
 
-
     <input class="Boton_registrar" type="submit" value="Crear Cuenta" />
     <a class="Boton_volver" routerLink="/login" routerLinkActive="active">Volver</a>
   </form>
 </div>
+
